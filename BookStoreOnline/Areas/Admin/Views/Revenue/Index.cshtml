@@ -1,0 +1,155 @@
+﻿@model IEnumerable<BookStoreOnline.Models.Order>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Chi Tiết Doanh Thu</h2>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<div class="main--content">
+    <div class="overview">
+        <div class="title">
+            <select name="date" id="date" class="dropdown">
+                <option value="today">Today</option>
+                <option value="lastweek">Last Week</option>
+                <option value="lastmonth">Last Month</option>
+                <option value="lastyear">Last Year</option>
+                <option value="alltime">All Time</option>
+            </select>
+        </div>
+        <div class="cards">
+            <div class="card card-1">
+                <div class="card--data">
+                    <div class="card--content">
+                        <h5 class="card--title">Tổng số sách bán được</h5>
+                        <h1>152</h1>
+                    </div>
+                    <i class="ri-user-2-line card--icon--lg"></i>
+                </div>
+                <div class="card--stats">
+                    <span><i class="ri-bar-chart-fill card--icon stat--icon"></i></span>
+                    <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i></span>
+                    <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i></span>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="card--data">
+                    <div class="card--content">
+                        <h5 class="card--title">Tổng đơn hàng</h5>
+                        <h1>145</h1>
+                    </div>
+                    <i class="ri-user-line card--icon--lg"></i>
+                </div>
+                <div class="card--stats">
+                    <span><i class="ri-bar-chart-fill card--icon stat--icon"></i></span>
+                    <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i></span>
+                    <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i></span>
+                </div>
+            </div>
+            <div class="card card-3">
+                <div class="card--data">
+                    <div class="card--content">
+                        <h5 class="card--title">Tổng tiền</h5>
+                        <h1>102.000.000</h1>
+                    </div>
+                    <i class="ri-calendar-2-line card--icon--lg"></i>
+                </div>
+                <div class="card--stats">
+                    <span><i class="ri-bar-chart-fill card--icon stat--icon"></i></span>
+                    <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i></span>
+                    <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i></span>
+                </div>
+            </div>
+            <div class="card card-4">
+                <div class="card--data">
+                    <div class="card--content">
+                        <h5 class="card--title">Lợi Nhuận</h5>
+                        <h1>15%</h1>
+                    </div>
+                    <i class="ri-hotel-bed-line card--icon--lg"></i>
+                </div>
+                <div class="card--stats">
+                    <span><i class="ri-bar-chart-fill card--icon stat--icon"></i></span>
+                    <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i></span>
+                    <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Khách hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Địa chỉ giao hàng</th>
+                    <th>Đơn giá</th>
+                    <th>Trạng thái đơn hàng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cameron Williamson</td>
+                    <td>30/07/2022</td>
+                    <td>N/A</td>
+                    <td>1.200.000</td>
+                    <td class="pending">pending</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+                <tr>
+                    <td>George Washington</td>
+                    <td>30/07/2022</td>
+                    <td>N/A</td>
+                    <td>200.000</td>
+                    <td class="confirmed">Confirmed</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+                <tr>
+                    <td>John Adams</td>
+                    <td>29/07/2022</td>
+                    <td>N/A</td>
+                    <td>90.000</td>
+                    <td class="confirmed">Confirmed</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+                <tr>
+                    <td>Thomas Jefferson</td>
+                    <td>29/07/2022</td>
+                    <td>N/A</td>
+                    <td>450.000</td>
+                    <td class="rejected">Rejected</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+                <tr>
+                    <td>James Madison</td>
+                    <td>29/07/2022</td>
+                    <td>N/A</td>
+                    <td>900.000</td>
+                    <td class="confirmed">Confirmed</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+                <tr>
+                    <td>Andrew Jackson</td>
+                    <td>28/07/2022</td>
+                    <td>N/A</td>
+                    <td>1.200.000</td>
+                    <td class="confirmed">Confirmed</td>
+                    <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        </div>
+    </section>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
